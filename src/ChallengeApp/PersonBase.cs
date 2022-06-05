@@ -5,7 +5,6 @@ namespace ChallengeApp
 {
     public class PersonBase
     {
-
         private string name;
         public string Name 
         {
