@@ -7,8 +7,9 @@ namespace ChallengeApp
     {
         static void Main(string[] args)
         {          
-            Console.WriteLine("Please input name or ID");
+            Console.WriteLine("Please input name");
             var name = Console.ReadLine();
+            
             var employee = new Employee(name, new DateTime(9999, 12, 31));
             
             employee.DateOfBirth = employee.SetDateOfBirth();

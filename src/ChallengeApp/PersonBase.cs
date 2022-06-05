@@ -5,7 +5,27 @@ namespace ChallengeApp
 {
     public class PersonBase
     {
-        public string Name { get; set; }
+
+        private string name;
+        public string Name 
+        {
+            get { return name; }
+            set
+            {
+                if(String.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException($"Invalid argument {nameof(Name)}");
+                }
+                foreach(char c in value)
+                {
+                    if(char.IsDigit(c))
+                    {
+                        throw new ArgumentException($"Invalid argument {nameof(Name)}");
+                    }
+                }
+                this.name = value;
+            }
+        }
 
         public PersonBase(string name)
         {
