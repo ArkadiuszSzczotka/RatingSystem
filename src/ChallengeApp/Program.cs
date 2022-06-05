@@ -11,7 +11,7 @@ namespace ChallengeApp
             var name = Console.ReadLine();
             var employee = new Employee(name, new DateTime(9999, 12, 31));
             
-            employee.DateOfBirth = new DateTime(1994, 12, 7);
+            employee.DateOfBirth = employee.SetDateOfBirth();
             Console.WriteLine($"{employee.Name} born on {employee.DateOfBirth}");
                         
             employee.GradeAddedLowerThanThree += OnTheLowestGradeAdded;

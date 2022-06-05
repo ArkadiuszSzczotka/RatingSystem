@@ -23,6 +23,28 @@ namespace ChallengeApp
             this.grades.Add(result);
             }
         }   
+
+    
+
+        public DateTime SetDateOfBirth()
+        {
+            DateTime birthDay;
+            Console.WriteLine("Enter date of birth as day/month/year");
+
+            string[] formats = { "dd/MM/yyyy", "dd/M/yyyy", "d/M/yyyy", "d/MM/yyyy",
+                    "dd/MM/yy", "dd/M/yy", "d/M/yy", "d/MM/yy"};
+
+            while (!DateTime.TryParseExact(Console.ReadLine(), formats,
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None,
+                out birthDay))
+            {
+                Console.WriteLine("Your input is incorrect. Please input again.");
+            }
+            return birthDay;
+        }
+    
+        
         public void ChangeName(Employee employee, string name) 
         {
             {
