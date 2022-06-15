@@ -13,20 +13,8 @@ namespace ChallengeApp
         
 
         public Employee(string name, DateTime date) : base(name, date)
-        { }    
-        
-        public void AddGradeFromString(string grade)
-        {   
-            int result;
-            if (int.TryParse(grade, out result))
-            {
-            this.grades.Add(result);
-            }
-        }   
-
-    
-
-        public DateTime SetDateOfBirth()
+        { }
+        public override DateTime SetDateOfBirth()
         {
             DateTime birthDay;
             Console.WriteLine("Enter date of birth as day/month/year");
@@ -43,7 +31,14 @@ namespace ChallengeApp
             }
             return birthDay;
         }
-    
+        public void AddGradeFromString(string grade)
+        {   
+            int result;
+            if (int.TryParse(grade, out result))
+            {
+            this.grades.Add(result);
+            }
+        }
         
         public void ChangeName(Employee employee, string name) 
         {

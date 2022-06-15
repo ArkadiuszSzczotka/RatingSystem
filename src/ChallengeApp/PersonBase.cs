@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ChallengeApp
 {
-    public class PersonBase
+    public abstract class PersonBase
     {
         private string name;
         public string Name 
@@ -52,6 +52,8 @@ namespace ChallengeApp
                     dateOfBirth = value;
                 }
             }
-        }        
+        }  
+        public abstract DateTime SetDateOfBirth();
+            
     }
 }

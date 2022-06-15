@@ -9,8 +9,7 @@ namespace ChallengeApp
         {          
             Console.WriteLine("Please input name");
             var name = Console.ReadLine();
-            
-            var employee = new Employee(name, new DateTime(9999, 12, 31));
+            var employee= new EmployeeInFile(name, new DateTime(2000, 1, 1));
             
             employee.DateOfBirth = employee.SetDateOfBirth();
             Console.WriteLine($"{employee.Name} born on {employee.DateOfBirth}");
@@ -47,12 +46,12 @@ namespace ChallengeApp
                 
             }
 
-            var stat = employee.GetStatistics();
-            Console.WriteLine($"Max: {stat.High}");
-            Console.WriteLine($"Min: {stat.Low}");
-            Console.WriteLine($"Avg: {stat.Average:N2}");
-            Console.WriteLine($"Grade: {stat.Letter}");
-            Console.WriteLine($"Your Rise could be: {stat.Rise}");          
+            // var stat = employee.GetStatistics();
+            // Console.WriteLine($"Max: {stat.High}");
+            // Console.WriteLine($"Min: {stat.Low}");
+            // Console.WriteLine($"Avg: {stat.Average:N2}");
+            // Console.WriteLine($"Grade: {stat.Letter}");
+            // Console.WriteLine($"Your Rise could be: {stat.Rise}");          
 
             
         

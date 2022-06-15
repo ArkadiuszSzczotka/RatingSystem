@@ -15,5 +15,9 @@ namespace ChallengeApp
         {
             throw new NotImplementedException();
         }
+        public override DateTime SetDateOfBirth()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

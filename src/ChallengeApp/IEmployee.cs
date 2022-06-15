@@ -1,3 +1,4 @@
+using System;
 namespace ChallengeApp
 {
    public interface IEmployee 
@@ -7,6 +8,7 @@ namespace ChallengeApp
 
         string Name { get; }
         event GradeAddedDelegate GradeAddedLowerThanThree;
+        DateTime SetDateOfBirth();
 
     }
     
